@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () { //获取键盘建码值
+            document.onkeydown = function (e) {
+                e = event || window.event;
+                console.log(e.keyCode);
+            }
+        }
+    </script>
+    <!-- <p>倒计时：<span>10</span></p>
+    <input type="button" value="开始计时">
+    <script>
+        var n = 10; //定义计数器数值
+        var btn = document.querySelector("input");
+        var timer = null;
+        btn.onclick = function() {
+            clearInterval(timer);
+            timer = setInterval(countdown, 1000);
+            //设计一个计数器
+        };
+
+        function countdown() {
+            if (n > 0 || !(n == 0)) { //判断计数器的值是否为0
+                n--;
+                var a = document.querySelector("span");
+                a.innerHTML = n; //更改计数器的数值
+                console.log(a);
+            }
+
+        }
+    </script> -->
+    <!-- <script>
+        var arr = [5, 12, 0, 1, 9, 6, 4, 3];
+
+        console.log(arr.sort(function(a, b) {
+            return a - b;
+        }));
+    </script> -->
+    <!-- <script>
+        //reduce对数组判断出现的次数
+        let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+        let nameNum = names.reduce((pre, cur) => {
+            if (cur in pre) {
+                pre[cur]++
+            } else {
+                pre[cur] = 1
+            }
+            return pre
+        }, {})
+        console.log(nameNum);
+    </script> -->
+    <!-- <script>
+        //数组去重
+
+        let arr = [1, 2, 3, 4, 4, 1]
+        let newArr = arr.reduce((pre, cur) => {
+            if (!pre.includes(cur)) {
+                return pre.concat(cur)
+            } else {
+                return pre
+            }
+        }, [])
+        console.log(newArr);
+    </script> -->
+    <!-- <script>
+        //二维数组转化以为数组
+        let arr = [
+            [0, 1],
+            [2, 3],
+            [4, 5]
+        ]
+        let newArr = arr.reduce((pre, cur) => {
+            return pre.concat(cur)
+        }, [])
+        console.log(newArr);
+    </script> -->
+    <!-- <script>
+        //对象里面数组求和
+        var result = [{
+            subject: 'math',
+            score: 10
+        }, {
+            subject: 'chinese',
+            score: 20
+        }, {
+            subject: 'english',
+            score: 30
+        }];
+
+        var sum = result.reduce(function(prev, cur) {
+            return cur.score + prev;
+        }, 0);
+        console.log(sum)
+    </script> -->
+
+</body>
+
+</html>
